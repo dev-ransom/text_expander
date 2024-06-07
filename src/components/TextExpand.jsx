@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import './style.css'
-const App = () => {
+import Card from './Shared/Card';
+
+const TextExpand = () => {
   return (
     <div>
       <TextExpander>
@@ -32,7 +33,7 @@ const App = () => {
   )
 }
 
-export default App
+export default TextExpand
 
 const TextExpander = ({
   collapsedNumWords = 10,
@@ -57,9 +58,10 @@ const TextExpander = ({
   }
 
   return (
-    <div className={className}>
+    <Card className={className}>
       <span>{displayText}</span>
       <button onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyles}>{isExpanded ? collapseButtonText : expandButtonText}</button>
-    </div>
+    </Card>
   )
-}
+};
+
