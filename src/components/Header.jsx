@@ -1,7 +1,8 @@
 const Header = ({ text, bgColor, textColor }) => {
     const HeaderStyles = {
         backgroundColor: bgColor,
-        color: textColor
+      color: textColor,
+        
     }
     return (
       
